@@ -1,0 +1,91 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffe4e1;
+    overflow: hidden; /* Empêche le défilement de la page à cause des cœurs */
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    background-color: #fffaf0;
+    padding: 40px;
+    border: 2px solid #ffb6c1;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 800px;
+    height: 700px;
+}
+
+h1 {
+    color: #ff69b4;
+    font-size: 24px;
+}
+
+.buttons {
+    margin-top: 20px;
+    position: relative;
+    height: 100px;
+}
+
+button {
+    padding: 10px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ffb6c1;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff69b4;
+}
+
+#no-btn {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+/* Style pour le GIF */
+#cute-pic {
+    margin-top: 20px;
+}
+
+/* Style pour les cœurs */
+.heart {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #ff69b4;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    animation: float 5s linear infinite;
+    opacity: 0.7;
+    transform: translate(-50%, -50%); /* Centrer les cœurs */
+}
+
+/* Animation des cœurs */
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-30px) translateX(20px);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+/* Positionner les cœurs de manière aléatoire */
+.heart:nth-child(4) { top: 20%; left: 10%; }
+.heart:nth-child(3) { top: 60%; left: 80%; }
+.heart:nth-child(2) { top: 70%; left: 30%; }
+.heart:nth-child(1) { top: 40%; left: 60%; }
